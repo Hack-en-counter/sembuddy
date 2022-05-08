@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.navbar{
+    padding-top: 0%;
+    width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-brand{
+    font-size: 2.2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar li{
+    padding: 0 0.8rem;
+}
+.navbar li a{
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.navbar li a:hover{
+    color: var(--black) !important;
+}
+.card{
+    width: 23rem; 
+    height: auto;
+}
+.card:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .card:hover:before {
+    transform: scale(2.15);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+table,td{
+    padding: 2.5rem;
+    border-collapse: collapse;
+    border: 0;
+}
+h3{
+    padding-top: 2rem;
+    text-align: center;
+    color:white;
+}
+.contact{
+    text-align: center;
+    color: white;
+}
+.footer{
+    background-color: rgb(47, 106, 235);
+}
+.img-circle {
+    border-radius: 4rem;
+}
+.butto{
+    text-decoration: none;
+    color: black;
+    border-radius: 5rem;
+}
+.hh{
+    align-content: right;
+}
+.p-3{
+    border-radius: 1.5rem;
+}
+.container1{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.row{
+    padding: 0.8rem;
+}
+.row:hover{
+    background-color: blueviolet;
+    border-radius: 2rem;
+}
+.col{
+    width: 100%;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    text-align: center;
 }
