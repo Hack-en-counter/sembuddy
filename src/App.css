@@ -1,3 +1,14 @@
+h1{
+   text-align: center;
+}
+.con{
+    padding-left: 27rem;
+    text-align: center;
+}
+ul.no-bullets{
+    list-style-type: none;
+ 
+}
 .navbar{
     padding-top: 0%;
     width: 100%;
@@ -16,8 +27,11 @@
     color: var(--black) !important;
 }
 .card{
-    width: 23rem; 
-    height: auto;
+    width: 22rem; 
+    height: 25rem;
+}
+.foot {
+    margin-left: 16rem;
 }
 .card:hover {
     transition: all 0.2s ease-out;
@@ -44,8 +58,13 @@ h3{
     text-align: center;
     color: white;
 }
+.head{
+    color: black;
+    padding-left: 9.5rem;
+}
 .footer{
-    background-color: rgb(47, 106, 235);
+    background-color: #008080;
+    padding-bottom: 0;
 }
 .img-circle {
     border-radius: 4rem;
@@ -64,12 +83,22 @@ h3{
 .container1{
     padding-top: 4rem;
     padding-bottom: 4rem;
+    
 }
+.container3 {
+    padding: 0 16px;
+  }
+  
+  .container3::after, .row1::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 .row{
     padding: 0.8rem;
 }
 .row:hover{
-    background-color: blueviolet;
+    background-color: #25c5c5;
     border-radius: 2rem;
 }
 .col{
@@ -78,3 +107,115 @@ h3{
     padding-right: 15rem;
     text-align: center;
 }
+
+.sem1
+{
+    background: url("./images/web2.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem2
+{
+    background: url("./images/web4.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem3
+{
+    background: url("./images/web6(1).jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem4
+{
+    background: url("./images/web5.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem5
+{
+    background: url("./images/iet\ photo4.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem6
+{
+    background: url("./images/iet\ photo3.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem8
+{
+    background: url("./images/web8.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.sem7
+{
+    background: url("./images/web7.jpg");
+    opacity: 1.0;
+    height:auto;
+    background-size:cover;
+}
+.navbar-dark
+{
+    background-color: #008080;
+}
+.login
+{
+    text-align: left;
+    margin-top: 24px;
+    margin: 100px; 
+    margin-left: 30rem;
+    border: solid 5px #573775;
+    background: aliceblue;
+    padding: 22px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 6px solid #0e8863;
+}
+.register
+{
+    text-align: left;
+    margin-top: 24px;
+    margin: 100px; 
+    margin-left: 30rem;
+    border: solid 5px #573775;
+    background: aliceblue;
+    padding: 22px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 6px solid #0e8863;
+}
+input{
+	border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 30px;
+    border: 2px solid #0d664b;
+    padding-left: 10px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+h2{
+    text-align: center;
+}
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 0 8px;
+  }
+  .card4 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }

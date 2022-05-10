@@ -4,7 +4,8 @@ import './App.css';
 const Footer = () =>{
     return(
         <div className="footer">
-          <h3>GET IN TOUCH</h3>
+          <h3><i>GET IN TOUCH</i></h3>
+          <div className="foot">
           <table className="contact">
               <tr>
                   <td>
@@ -57,6 +58,7 @@ const Footer = () =>{
                   </td>
               </tr>
           </table>
+          </div>
         </div>
     );
 };
