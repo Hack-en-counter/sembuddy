@@ -1,12 +1,27 @@
 import React from 'react'
 import Footer from '../Footer.js';
 import Navbar from '../Navbar';
+import { useState , useEffect } from 'react';
+import {db} from '../firebase_config'
+import { collection , getDocs , addDoc , updateDoc, doc} from "firebase/firestore";
+import { async } from '@firebase/util';
 const Engmath1 = () => {
+  const [sem1 , setSem1] = useState(null);
+  const usersCollectionRef = collection(db , "semester1");
+  useEffect(() => {
+
+    const getSem1 = async () => {
+      const data = await getDocs(usersCollectionRef);
+      setSem1(data.docs.map((doc) => ({...doc.data() , id: doc.id })))
+    };
+
+    getSem1();
+  } , []);
   return (
     <div className="sem">
       <Navbar/>
       <div data-aos="fade-up" data-aos-delay="150" class="aos-init aos-animate">
-        <h1 id="ah">Engineering Mathematics I</h1>
+        <h1 id="ah">Engineering Mathematics</h1>
       </div>
       <div class="wrapper">
         <div class="table">
@@ -14,24 +29,16 @@ const Engmath1 = () => {
           <div class="cell">Papers</div>
           <div class="cell">Link</div>
         </div>
-        <div class="r">
-          <div class="cell">CT-1</div>
-          <div class="cell">
-            <a href="">Download</a>
+        {sem1 && sem1[4].papers.map((sem) => {
+          return (
+            <div class="r">
+            <div class="cell">{sem.name}</div>
+            <div class="cell">
+              <a href={sem.url}>Download</a>
+            </div>
           </div>
-        </div>
-        <div class="r">
-          <div class="cell">CT-2</div>
-          <div class="cell">
-            <a href="">Download</a>
-          </div>
-        </div>
-        <div class="r">
-          <div class="cell">End Sems</div>
-          <div class="cell">
-            <a href="">Download</a>
-          </div>
-        </div>
+          );
+        })}
         </div>
       </div>
       <div class="wrapper">
@@ -40,12 +47,16 @@ const Engmath1 = () => {
           <div class="cell">Guide</div>
           <div class="cell">Link</div>
         </div>
-        <div class="r">
-          <div class="cell">Quantum</div>
-          <div class="cell">
-            <a href="">Download</a>
+        {sem1 && sem1[4].guide.map((sem) => {
+          return (
+            <div class="r">
+            <div class="cell">{sem.name}</div>
+            <div class="cell">
+              <a href={sem.url}>Download</a>
+            </div>
           </div>
-        </div>
+          );
+        })}
         </div>
       </div>
       <div class="wrapper">
@@ -54,18 +65,16 @@ const Engmath1 = () => {
           <div class="cell">Books</div>
           <div class="cell">Link</div>
         </div>
-        <div class="r">
-          <div class="cell"></div>
-          <div class="cell">
-            <a href="">Download</a>
+        {sem1 && sem1[4].books.map((sem) => {
+          return (
+            <div class="r">
+            <div class="cell">{sem.name}</div>
+            <div class="cell">
+              <a href={sem.url}>Download</a>
+            </div>
           </div>
-        </div>
-        <div class="r">
-          <div class="cell"></div>
-          <div class="cell">
-            <a href="">Download</a>
-          </div>
-        </div>
+          );
+        })}
         </div>
       </div>
       <div class="wrapper">
@@ -74,12 +83,16 @@ const Engmath1 = () => {
           <div class="cell">Notes</div>
           <div class="cell">Link</div>
         </div>
-        <div class="r">
-          <div class="cell">Notes</div>
-          <div class="cell">
-            <a href="">Download</a>
+        {sem1 && sem1[4].notes.map((sem) => {
+          return (
+            <div class="r">
+            <div class="cell">{sem.name}</div>
+            <div class="cell">
+              <a href={sem.url}>Download</a>
+            </div>
           </div>
-        </div>
+          );
+        })}
         </div>
       </div>
     <Footer/>
